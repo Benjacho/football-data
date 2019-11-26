@@ -15,4 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/competitions', function (Request $request) { });
+Route::get('/competitions/{id}', 'CompetitionController@getCompetition');
+Route::get('/competitions', 'CompetitionController@getCompetitions');
+Route::get('/team/{id}', 'TeamsController@getTeam');
+Route::get('/team', 'TeamsController@getTeams');
+Route::get('/players', 'PlayerController@players');

@@ -3,9 +3,8 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use GuzzleHttp\Client;
 
-class Competition extends Model
+class Team extends Model
 {
     protected $fillable = [
         'id',
@@ -13,6 +12,6 @@ class Competition extends Model
     ];
 
     protected $casts = [
-        'info' => 'array'
+        'info' => 'array',
     ];
 }
